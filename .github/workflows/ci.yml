@@ -139,6 +139,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        
+      - name: Temp fix for ZAP permissions
+        run: chmod a+w ${{ github.workspace }}/.zap
 
       - name: Run OWASP ZAP baseline scan
         uses: zaproxy/action-baseline@v0.12.0
