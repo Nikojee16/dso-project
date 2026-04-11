@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v0.2.0 (2026-04-11)
+
+### Ci
+
+* ci: fixed token ([`9894cc2`](https://github.com/Nikojee16/dso-project/commit/9894cc26af7b31c048038ad9e8ca00355991bd95))
+
+* ci: staging and production deploy to server ([`ddbf6a2`](https://github.com/Nikojee16/dso-project/commit/ddbf6a2cc7b296ef5a5ce822fe99e995e8ac7187))
+
+### Feature
+
+* feat: staging and production deployment pipeline ([`7769ca3`](https://github.com/Nikojee16/dso-project/commit/7769ca301aea22515bdb93b0e2142710bc305189))
+
+### Unknown
+
+* Merge pull request #15 from Nikojee16/dev
+
+ci: fixed token ([`c19824b`](https://github.com/Nikojee16/dso-project/commit/c19824b9e4f2406e32d9f0a820229557de25e283))
+
+* Merge pull request #13 from Nikojee16/feature/deploy-to-server
+
+ci: staging and production deploy to server ([`e3f3520`](https://github.com/Nikojee16/dso-project/commit/e3f3520cd21545e0fd3473621419ba5feb150de2))
+
 ## v0.1.0 (2026-04-11)
 
 ### Feature
