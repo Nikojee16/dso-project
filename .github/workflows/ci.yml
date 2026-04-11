@@ -130,6 +130,23 @@ jobs:
           script: |
             export DEPLOY_ENV=staging
             ~/app/deploy.sh
+    
+  zap-scan:
+    runs-on: ubuntu-latest
+    needs: deploy-staging
+    if: github.ref == 'refs/heads/dev' && github.event_name == 'push'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run OWASP ZAP baseline scan
+        uses: zaproxy/action-baseline@v0.12.0
+        with:
+          target: "http://${{ secrets.SSH_HOST }}:5001"
+          rules_file_name: ".zap/rules.tsv"
+          fail_action: true
+          artifact_name: "zap-report"
 
   deploy-production:
     runs-on: ubuntu-latest
