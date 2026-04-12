@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## v1.0.0 (2026-04-12)
+
+### Breaking
+
+* feat!: Working ZAP scan for first major version ([`0be0c6b`](https://github.com/Nikojee16/dso-project/commit/0be0c6b9f69339bba786ef83217bc0d6908657f2))
+
+### Ci
+
+* ci: updated zap-scan job ([`69da243`](https://github.com/Nikojee16/dso-project/commit/69da2432e4dedddcb73f58c55570ebc07f6f8147))
+
+* ci: issue permissions for zap ([`523e1ca`](https://github.com/Nikojee16/dso-project/commit/523e1ca424673387355b5409f958ae3c5c557e74))
+
+* ci: second fix for zap ([`8e766d7`](https://github.com/Nikojee16/dso-project/commit/8e766d75a48409dbc9efdd68ef83cff8efe66bd6))
+
+* ci: zap fix ([`c1fe865`](https://github.com/Nikojee16/dso-project/commit/c1fe865e48b30dede599c13dcd124e9aac849fb1))
+
+### Feature
+
+* feat: add OWASP ZAP DAST for staging ([`f99dce5`](https://github.com/Nikojee16/dso-project/commit/f99dce50e11e4c61b75c04c9f9c074a7ffdb9307))
+
+### Unknown
+
+* Merge pull request #16 from Nikojee16/feature/zap
+
+feat: add OWASP ZAP DAST for staging ([`083d942`](https://github.com/Nikojee16/dso-project/commit/083d942fd766dfd318b7fc3362cf82123d7927f2))
+
 ## v0.2.0 (2026-04-11)
 
 ### Ci
