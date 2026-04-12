@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dso-demo-api
+  namespace: dso-demo-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dso-demo-api
+  template:
+    metadata:
+      labels:
+        app: dso-demo-api
+    spec:
+      serviceAccountName: dso-demo-api-sa
+      containers:
+        - name: dso-demo-api
+          image: ghcr.io/nikojee16/dso-project:latest
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: dso-demo-config
+            - secretRef:
+                name: dso-demo-secret

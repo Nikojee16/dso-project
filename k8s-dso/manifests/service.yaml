@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dso-demo-api-service
+  namespace: dso-demo-app
+spec:
+  selector:
+    app: dso-demo-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: ClusterIP
