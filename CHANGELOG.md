@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## v1.1.0 (2026-04-12)
+
+### Ci
+
+* ci: fixed kubernetes deployment image ([`bbc894b`](https://github.com/Nikojee16/dso-project/commit/bbc894b0681fc8fbe7dcf31aee047190479f9f26))
+
+* ci: add kubernetes deployment to the pipeline ([`dd23e5b`](https://github.com/Nikojee16/dso-project/commit/dd23e5b9b59247b49227f895190dd3c72320fddf))
+
+### Documentation
+
+* docs: updated README for version 1.0.0 ([`32bf010`](https://github.com/Nikojee16/dso-project/commit/32bf01054978fe770fd670f0d4e58213c0f78ddc))
+
+### Feature
+
+* feat: kubernetes deployment to the server
+
+Replaces docker deployment. ([`f36d9f5`](https://github.com/Nikojee16/dso-project/commit/f36d9f586a06f4de0e630e8cb1d367c04f828d26))
+
+* feat: kubernetes files ([`6bf8462`](https://github.com/Nikojee16/dso-project/commit/6bf8462e01ddc4680ddbfb0fb268683b125f44f4))
+
+### Unknown
+
+* Merge pull request #23 from Nikojee16/feature/kubedeploy
+
+ci: fixed kubernetes deployment image ([`a5af234`](https://github.com/Nikojee16/dso-project/commit/a5af2348bc3e62cf104ff54b87ced0fa533ca576))
+
+* Merge pull request #22 from Nikojee16/feature/kubedeploy
+
+ci: add kubernetes deployment to the pipeline ([`56700e4`](https://github.com/Nikojee16/dso-project/commit/56700e430a12d5796f58cafa67932a2c6011a88c))
+
+* Merge pull request #21 from Nikojee16/kube
+
+feat: kubernetes files from server ([`1689ab9`](https://github.com/Nikojee16/dso-project/commit/1689ab950e9daefc49ca0e738819c3580bad51e1))
+
 ## v1.0.0 (2026-04-12)
 
 ### Breaking
