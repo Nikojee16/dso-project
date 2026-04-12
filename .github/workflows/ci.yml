@@ -139,7 +139,7 @@ jobs:
       - name: Deploy to staging namespace
         run: |
           kubectl set image deployment/dso-demo-api \
-            dso-demo-api=ghcr.io/${{ needs.build-and-push.outputs.repo-name }}:sha-${{ github.sha }} \
+            dso-demo-api=ghcr.io/${{ needs.build-and-push.outputs.repo-name }}:${{ needs.build-and-push.outputs.image-tag }} \
             -n dso-demo-app-staging
 
       - name: Wait for rollout
@@ -197,7 +197,7 @@ jobs:
       - name: Deploy to production namespace
         run: |
           kubectl set image deployment/dso-demo-api \
-            dso-demo-api=ghcr.io/${{ needs.build-and-push.outputs.repo-name }}:sha-${{ github.sha }} \
+            dso-demo-api=ghcr.io/${{ needs.build-and-push.outputs.repo-name }}:${{ needs.build-and-push.outputs.image-tag }} \
             -n dso-demo-app
 
       - name: Wait for rollout
