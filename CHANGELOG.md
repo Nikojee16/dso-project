@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v1.2.0 (2026-05-03)
+
+### Feature
+
+* feat: add audit logs to ci pipeline ([`df1263f`](https://github.com/Nikojee16/dso-project/commit/df1263ff7673eafc46c2ad7543e71bd722f57a2e))
+
+### Unknown
+
+* Dev to main
+
+Includes audit logs ([`617baa3`](https://github.com/Nikojee16/dso-project/commit/617baa3302e14ff7e0968792b2311ff530caee15))
+
+* Merge pull request #25 from Nikojee16/feature/logging
+
+feat: add audit logs to ci pipeline ([`8fd8eaa`](https://github.com/Nikojee16/dso-project/commit/8fd8eaa9ede3873ceb9c6360ef78b29448bb1c3a))
+
 ## v1.1.0 (2026-04-12)
 
 ### Ci
