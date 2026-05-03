@@ -234,3 +234,39 @@ jobs:
         run: semantic-release version --push
         env:
           GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+
+  audit-log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send audit log to opensearch
+        env:
+          OPENSEARCH_URL: ${{ secrets.OPENSEARCH_URL }}
+          OPENSEARCH_USER: ${{ secrets.OPENSEARCH_USER }}
+          OPENSEARCH_PASS: ${{ secrets.OPENSEARCH_PASS }}
+        run: |
+          PUSH_TYPE="push"
+          if [ "${{ github.event.forced }}" = "true" ]; then
+            PUSH_TYPE="force_push"
+          fi
+
+          PAYLOAD=$(cat <<EOF
+          {
+            "@timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "event_type": "git_push",
+            "push_type": "${PUSH_TYPE}",
+            "repo": "${{ github.repository }}",
+            "branch": "${{ github.ref_name }}",
+            "pusher": "${{ github.actor }}",
+            "commit_count": ${{ github.event.commits && toJson(github.event.commits) != 'null' && 1 || 0 }},
+            "head_commit": "${{ github.sha }}",
+            "compare_url": "${{ github.event.compare }}"
+          }
+          EOF
+          )
+
+          curl -s -o /dev/null \
+            --insecure \
+            -u "${OPENSEARCH_USER}:${OPENSEARCH_PASS}" \
+            -X POST "${OPENSEARCH_URL}/git-audit-logs/_doc" \
+            -H "Content-Type: application/json" \
+            -d "${PAYLOAD}"
